@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+  char operator;
+  double first , second ;
+  printf("enter an operator (+,-,*,/): ");
+    scanf("%c" , &operator);
+    printf("Enter first numbers :");
+    scanf("%lf", &first);
+    printf("Enter second numbers :");
+    scanf("%lf", &second);
+      switch (operator)
+	{
+	case '+':
+	  printf("%lf + %lf = %lf", first,second,(first+second));
+	  break;
+	   case '-':
+	     printf("%lf - %lf = %lf", first,second,(first-second));
+          break;
+	   case '*':
+	     printf("%lf * %lf = %lf", first,second,(first*second));
+          break;
+	   case '/':
+	     if( second != 0.0)
+	      printf("%lf / %lf = %lf", first,second,(first/second));
+	     else
+	      printf("you are an idiot");
+          break;
+	}
+      
+    return (0);
+}
